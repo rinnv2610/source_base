@@ -62,6 +62,10 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
+    'DEFAULT_RENDERER_CLASSES': (
+        'source_base.core.custom.response.ApiRenderer',
+    ),
+    'EXCEPTION_HANDLER': 'source_base.core.custom.exceptions.custom_exception_handler'
 }
 
 SIMPLE_JWT = {

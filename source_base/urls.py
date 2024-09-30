@@ -20,6 +20,9 @@ from django.urls import path, re_path
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from rest_framework import permissions
+from source_base.core.custom.exceptions import server_error
+
+handler500 = server_error
 
 schema_view = get_schema_view(
     openapi.Info(
